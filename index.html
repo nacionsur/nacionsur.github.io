@@ -3,161 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nación Sur | Restauración Soberana</title>
+    <title>Nación Sur | Versión Híbrida</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #FFFFFF; /* Fondo Blanco Puro - Estilo Mac */
-            color: #1D1D1F; /* Texto casi negro - Estilo Apple */
-            scroll-behavior: smooth; 
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1d1d1f; scroll-behavior: smooth; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .btn-blue { background-color: #0071e3; color: #ffffff; transition: all 0.2s ease; }
+        .btn-blue:hover { background-color: #0077ed; transform: scale(1.02); }
         
-        /* Navegación Translucida minimalista */
-        .glass-nav { 
-            background: rgba(255, 255, 255, 0.8); 
-            backdrop-filter: blur(20px); /* Efecto blur de Mac OS */
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0,0,0,0.05); 
-        }
-
-        /* Botón estilo Apple */
-        .btn-apple {
-            background-color: #0071E3; /* Azul vibrante de Apple */
-            color: #FFFFFF;
-            transition: all 0.2s ease;
-        }
-        .btn-apple:hover {
-            background-color: #0077ED;
-            transform: scale(1.02);
-        }
-
-        /* Degradado suave para el Hero - de claro a blanco */
-        .hero-light-bg {
-            background: radial-gradient(50% 50% at 50% 50%, rgba(0, 113, 227, 0.05) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
-        }
+        /* El gráfico con colores del segundo diseño pero estructura del primero */
+        .bar-industria { background-color: #60a5fa; } /* Azul claro */
+        .bar-deuda { background-color: #f87171; } /* Rojo suave */
     </style>
 </head>
 <body>
 
-    <!-- NAVEGACIÓN -->
     <nav class="fixed w-full z-50 glass-nav">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tight text-zinc-900">NACIÓN <span class="text-[#0071E3]">SUR</span></div>
-            <div class="hidden lg:flex space-x-7 text-xs tracking-wide font-medium text-zinc-600">
-                <a href="#inicio" class="hover:text-[#0071E3]">Inicio</a>
-                <a href="#historia" class="hover:text-[#0071E3]">Historia</a>
-                <a href="#lotocracia" class="hover:text-[#0071E3]">Lotocracia</a>
-                <a href="#doctrina" class="hover:text-[#0071E3]">Doctrina</a>
-                <a href="#unirme" class="btn-apple px-4 py-1.5 rounded-full text-white text-[11px] font-semibold uppercase">Unirme</a>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter text-zinc-900">NACIÓN <span class="text-[#0071e3]">SUR</span></div>
+            <div class="hidden lg:flex space-x-8 text-xs uppercase tracking-widest font-bold text-zinc-500">
+                <a href="#inicio" class="hover:text-[#0071e3]">Inicio</a>
+                <a href="#historia" class="hover:text-[#0071e3]">Historia</a>
+                <a href="#lotocracia" class="hover:text-[#0071e3]">Lotocracia</a>
+                <a href="#unirme" class="btn-blue px-5 py-2 rounded-full text-white">Unirme</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION - Ahora Clorofila, Minimalista y Tipográfica -->
-    <header id="inicio" class="hero-light-bg min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div class="max-w-5xl">
-            <span class="inline-block bg-blue-50 text-[#0071E3] text-xs font-bold px-4 py-1 rounded-full mb-6 tracking-wide uppercase">Restauración Soberana</span>
-            <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter text-zinc-950 leading-[0.95]">
-                Argentina es un país <br><span class="text-[#0071E3]">saqueado</span>, no pobre.
+    <header id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 bg-white">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-zinc-950 uppercase">
+                Argentina no es un país pobre; <br><span class="text-[#0071e3]">es un país saqueado.</span>
             </h1>
-            <p class="text-xl md:text-2xl text-zinc-600 mb-12 leading-relaxed max-w-3xl mx-auto font-light">
-                Es hora de la transparencia total. Un sistema diseñado para la honestidad, auditado por tecnología y gestionado por la ciudadanía real.
+            <p class="text-xl text-zinc-500 mb-10 leading-relaxed font-light">
+                Lo que ves hoy no es un accidente. Es el resultado de un sistema diseñado para que el esfuerzo del que produce financie la impunidad del que gobierna.
             </p>
-            <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="#lotocracia" class="btn-apple px-10 py-4 font-semibold rounded-full text-base">La Solución Lotocrática</a>
-                <a href="#historia" class="bg-zinc-100 text-zinc-900 px-10 py-4 font-semibold rounded-full text-base hover:bg-zinc-200">Ver el Legado</a>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#lotocracia" class="btn-blue px-10 py-4 font-bold rounded-full uppercase tracking-widest text-sm shadow-lg shadow-blue-200">Tomar el Control</a>
+                <a href="#historia" class="bg-zinc-100 text-zinc-900 px-10 py-4 font-bold rounded-full uppercase tracking-widest text-sm hover:bg-zinc-200">Ver el Legado</a>
             </div>
         </div>
     </header>
 
-    <!-- SECCIÓN HISTORIA - Fondo Gris Muy Claro para contraste suave -->
-    <section id="historia" class="py-28 px-6 bg-zinc-50">
+    <section id="historia" class="py-24 px-6 bg-zinc-50">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl font-extrabold mb-16 tracking-tight text-zinc-950 uppercase">El país que nos robaron</h2>
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
-                <div class="space-y-8">
-                    <h3 class="text-2xl font-semibold text-[#0071E3] tracking-tight">MEMORIA AUDIOVISUAL</h3>
-                    <div class="aspect-video bg-white rounded-2xl border border-zinc-100 shadow-sm overflow-hidden p-2">
-                        <!-- Playlist de Montalbano -->
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL_XpYmYVvXG-v_9_p_9" frameborder="0" allowfullscreen class="rounded-xl"></iframe>
+            <h2 class="text-4xl font-bold mb-12 border-l-8 border-[#0071e3] pl-6 uppercase text-zinc-900">El país que nos robaron</h2>
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-[#0071e3] uppercase">Memoria Audiovisual</h3>
+                    <div class="aspect-video bg-white rounded-2xl border border-zinc-200 shadow-xl overflow-hidden p-2">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PL_XpYmYVvXG-v_9_p_9" frameborder="0" allowfullscreen class="rounded-lg"></iframe>
                     </div>
-                    <p class="text-lg text-zinc-700 leading-relaxed font-light">Hubo un tiempo donde fabricábamos aviones y reactores nucleares. Ese país no desapareció; nos lo quitaron. Nación Sur es el camino de regreso.</p>
+                    <p class="text-zinc-600 leading-relaxed">Hubo un tiempo donde fabricábamos aviones y reactores nucleares. Ese país no desapareció; nos lo quitaron.</p>
                 </div>
-                <div class="bg-white p-10 rounded-3xl border border-zinc-100 shadow-lg shadow-zinc-100/50 space-y-6">
-                    <h3 class="text-2xl font-semibold text-zinc-900tracking-tight">ARQUITECTURA DEL SAQUEO</h3>
-                    <p class="text-zinc-600 font-light mb-8">Correlación directa entre el endeudamiento externo y la desindustrialización planificada.</p>
-                    <div class="h-48 bg-zinc-100 rounded-xl flex items-end p-5 gap-3 border border-zinc-200">
-                        <div class="bg-blue-300 w-1/4 h-full rounded-t" title="Industria 1974"></div>
-                        <div class="bg-red-400 w-1/4 h-1/5 rounded-t" title="Deuda 1974"></div>
-                        <div class="bg-blue-500 w-1/4 h-2/3 rounded-t" title="Industria 2024"></div>
-                        <div class="bg-red-600 w-1/4 h-5/6 rounded-t" title="Deuda 2024"></div>
+
+                <div class="bg-white p-10 rounded-3xl border border-zinc-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-red-500 mb-6 uppercase">La Arquitectura del Saqueo</h3>
+                    <p class="text-sm text-zinc-500 mb-8">Correlación histórica entre el endeudamiento externo y la destrucción de nuestra capacidad industrial.</p>
+                    
+                    <div class="h-48 flex items-end justify-between gap-4 px-4">
+                        <div class="flex flex-col items-center w-full gap-2">
+                            <div class="bar-industria w-full h-40 rounded-t-lg shadow-sm" title="Industria 1970"></div>
+                            <span class="text-[10px] font-bold text-zinc-400">IND. 70s</span>
+                        </div>
+                        <div class="flex flex-col items-center w-full gap-2">
+                            <div class="bar-deuda w-full h-10 rounded-t-lg shadow-sm" title="Deuda 1970"></div>
+                            <span class="text-[10px] font-bold text-zinc-400">DEUDA 70s</span>
+                        </div>
+                        <div class="flex flex-col items-center w-full gap-2">
+                            <div class="bar-industria w-full h-20 opacity-50 rounded-t-lg shadow-sm" title="Industria Hoy"></div>
+                            <span class="text-[10px] font-bold text-zinc-400">IND. HOY</span>
+                        </div>
+                        <div class="flex flex-col items-center w-full gap-2">
+                            <div class="bar-deuda w-full h-44 rounded-t-lg shadow-sm" title="Deuda Hoy"></div>
+                            <span class="text-[10px] font-bold text-zinc-400">DEUDA HOY</span>
+                        </div>
                     </div>
-                    <div class="flex justify-between text-[11px] uppercase mt-4 tracking-widest text-zinc-500 font-bold">
-                        <span>Poder Industrial</span>
-                        <span>Deuda Externa</span>
-                    </div>
+                    <p class="mt-8 text-xs text-zinc-400 italic text-center">Mientras la deuda crecía para financiar la fuga, nuestras fábricas se convertían en depósitos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN LOTOCRACIA - Fondo Blanco de nuevo -->
-    <section id="lotocracia" class="py-28 px-6 max-w-7xl mx-auto">
+    <section id="lotocracia" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-20 items-center">
             <div>
-                <span class="inline-block bg-blue-50 text-[#0071E3] text-xs font-bold px-4 py-1 rounded-full mb-6 tracking-wide uppercase">El Nuevo Sistema</span>
-                <h2 class="text-5xl md:text-6xl font-extrabold mb-8 tracking-tighter text-zinc-950 leading-tight">La Solución <br><span class="text-[#0071E3]">Lotocrática</span></h2>
-                <p class="text-xl text-zinc-700 mb-10 leading-relaxed font-light">
-                    No te pedimos tu voto. Te entregamos la herramienta. Un sistema donde el poder se sortea entre ciudadanos idóneos y honestos, y donde cada peso se audita en tiempo real por inteligencia artificial.
-                </p>
-                <div class="space-y-6">
-                    <div class="flex gap-5 items-start">
-                        <div class="bg-blue-100 text-[#0071E3] p-4 rounded-full text-xl mt-1 font-black">?</div>
-                        <div>
-                            <h4 class="font-semibold text-zinc-950 text-lg">Sorteo Cívico</h4>
-                            <p class="text-zinc-600 font-light">Cargos asignados por azar entre ciudadanos idóneos, eliminando la casta y el financiamiento político.</p>
-                        </div>
+                <h2 class="text-5xl font-black mb-8 tracking-tighter uppercase">La Solución <span class="text-[#0071e3]">Lotocrática</span></h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="text-[#0071e3] font-black text-2xl">01.</div>
+                        <p class="text-zinc-600"><strong class="text-zinc-900">Sorteo Cívico:</strong> Cargos asignados por azar entre ciudadanos idóneos, eliminando la casta y el financiamiento político de raíz.</p>
                     </div>
-                    <div class="flex gap-5 items-start">
-                        <div class="bg-blue-100 text-[#0071E3] p-4 rounded-full text-xl mt-1 font-black">IA</div>
-                        <div>
-                            <h4 class="font-semibold text-zinc-950 text-lg">Auditoría Aumentada</h4>
-                            <p class="text-zinc-600 font-light">La IA garantiza la solvencia técnica de las propuestas y la transparencia absoluta del gasto.</p>
-                        </div>
+                    <div class="flex gap-6">
+                        <div class="text-[#0071e3] font-black text-2xl">02.</div>
+                        <p class="text-zinc-600"><strong class="text-zinc-900">Conciencia Aumentada:</strong> Auditoría permanente mediante IA para garantizar solvencia técnica y transparencia total en cada ley.</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-[#0071e3] font-black text-2xl">03.</div>
+                        <p class="text-zinc-600"><strong class="text-zinc-900">Fin del Saqueo:</strong> Sin campañas millonarias, no hay favores que devolver a los grupos de poder.</p>
                     </div>
                 </div>
             </div>
-            <!-- Mockup Minimalista de Panel de Control -->
-            <div class="bg-white border-4 border-zinc-900 rounded-3xl p-4 shadow-2xl shadow-zinc-200 overflow-hidden aspect-[4/3]">
-                <div class="flex gap-1.5 mb-4 p-1">
-                    <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
-                </div>
-                <div class="bg-zinc-50 rounded-xl h-full p-6 space-y-5 border border-zinc-100">
-                    <h3 class="text-xl font-bold text-zinc-950">Panel de Control Ciudadano</h3>
-                    <div class="h-2 w-24 bg-[#0071E3] rounded-full"></div>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-white p-4 rounded-lg border border-zinc-100 flex items-center gap-3">
-                            <div class="w-8 h-8 rounded bg-zinc-100"></div>
-                            <span class="text-sm font-medium text-zinc-800">Gasto Real</span>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg border border-zinc-100 flex items-center gap-3">
-                            <div class="w-8 h-8 rounded bg-zinc-100"></div>
-                            <span class="text-sm font-medium text-zinc-800">Asamblea</span>
-                        </div>
+            <div class="bg-zinc-50 border border-zinc-200 p-12 rounded-[40px] shadow-inner">
+                <div class="space-y-4">
+                    <div class="h-3 w-20 bg-[#0071e3] rounded-full mb-8"></div>
+                    <div class="p-6 bg-white rounded-2xl shadow-sm border border-zinc-100 flex justify-between items-center">
+                        <span class="font-bold text-zinc-800 text-sm tracking-tight uppercase">Auditoría Real de Gasto</span>
+                        <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                     </div>
-                    <div class="w-full h-24 bg-white rounded-lg border border-zinc-100 flex items-center justify-center text-xs text-blue-500 font-semibold uppercase tracking-widest">Módulo de Transparencia (Beta)</div>
+                    <div class="p-6 bg-white rounded-2xl shadow-sm border border-zinc-100 opacity-50 flex justify-between items-center">
+                        <span class="font-bold text-zinc-800 text-sm tracking-tight uppercase">Votación por Azar</span>
+                        <span class="text-[10px] font-bold">PRÓXIMAMENTE</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER minimalista -->
-    <footer class="py-16 border-t border-zinc-100 text-center">
-        <p class="text-xs text-zinc-500 uppercase tracking-widest font-semibold">Nación Sur © 2026 - Transparencia y Restauración</p>
+    <footer class="py-20 border-t border-zinc-100 text-center">
+        <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-[0.3em]">Nación Sur — Restauración del Orden Natural</p>
     </footer>
 
 </body>
